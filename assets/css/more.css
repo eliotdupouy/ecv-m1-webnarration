@@ -1,0 +1,44 @@
+/* necessaire pour le fonctionnement global */
+
+main{
+  scroll-behavior: auto;
+}
+
+main.smooth{
+  scroll-behavior: smooth;
+}
+
+.blocs-horizontaux + article:not(.open){
+  height: 0;
+  overflow: hidden;
+}
+
+/* petites corrections en bonus :) */
+
+
+.bg{
+  background-size: cover;
+}
+
+
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(60px);
+	}
+}
+
+svg #wheel {
+	animation: scroll ease 2s infinite;
+}
+
+// Default stuff.
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+}
